@@ -1,0 +1,90 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "name": "Australia",
+            "cities": [
+                {
+                    "name": "Sydney, Australia",
+                    "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+                    "timeZone": "Australia/Sydney"
+                },
+                {
+                    "name": "Melbourne, Australia",
+                    "imageUrl": "https://images.unsplash.com/photo-1545044846-351ba102b6d5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+                    "timeZone": "Australia/Melbourne"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Japan",
+            "cities": [
+                {
+                    "name": "Tokyo, Japan",
+                    "imageUrl": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf",
+                    "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+                    "timeZone": "Asia/Tokyo"
+                },
+                {
+                    "name": "Kyoto, Japan",
+                    "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "description": "Known for its historic temples, gardens, and traditional tea houses.",
+                    "timeZone": "Asia/Tokyo"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Brazil",
+            "cities": [
+                {
+                    "name": "Rio de Janeiro, Brazil",
+                    "imageUrl": "https://images.unsplash.com/photo-1596573787499-3b6cd45b2ce6?q=80&w=1247&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+                    "timeZone": "America/Sao_Paulo"
+                },
+                {
+                    "name": "São Paulo, Brazil",
+                    "imageUrl": "https://images.unsplash.com/photo-1572894234976-d961418c709d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+                    "timeZone": "America/Sao_Paulo"
+                }
+            ]
+        }
+    ],
+    "temples": [
+        {
+            "id": 1,
+            "name": "Angkor Wat, Cambodia",
+            "imageUrl": "https://images.unsplash.com/photo-1599283787923-51b965a58b05?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+            "timeZone": "Asia/Phnom_Penh"
+        },
+        {
+            "id": 2,
+            "name": "Taj Mahal, India",
+            "imageUrl": "https://plus.unsplash.com/premium_photo-1661885523029-fc960a2bb4f3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+            "timeZone": "Asia/Kolkata"
+        }
+    ],
+    "beaches": [
+        {
+            "id": 1,
+            "name": "Bora Bora, French Polynesia",
+            "imageUrl": "https://images.unsplash.com/photo-1580725869538-9b164c27c44f?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+            "timeZone": "Pacific/Tahiti"
+        },
+        {
+            "id": 2,
+            "name": "Copacabana Beach, Brazil",
+            "imageUrl": "https://images.unsplash.com/photo-1596573677494-accc8fbe89e8?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+            "timeZone": "America/Sao_Paulo"
+        }
+    ]
+}

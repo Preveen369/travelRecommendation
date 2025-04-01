@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <!-- Favicon for Branding -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/821/821354.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .page-section {
+            padding: 50px 20px;
+            display: none;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        .page-section.active { display: block; }
+        /* Home Section */
+        #home {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            color: white;
+            text-align: center;
+        }
+        /* About Section */
+        #about {
+            background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f2c0e');
+            color: #333;
+        }
+        /* Contact Section */
+        #contact {
+            background-image: url('https://images.unsplash.com/photo-1516306580123-e6e52b0b7b5f');
+            color: #333;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        #search-results {
+            margin-top: 20px;
+            display: none;
+        }
+        #search-results.active {
+            display: block;
+        }
+        .card-img-top { height: 200px; object-fit: cover; }
+        /* Styling for About Us page */
+        #about .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .about-social-icons {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .about-social-icons a {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .about-content {
+            max-width: 600px;
+            margin-left: 100px;
+        }
+        .team-members {
+            margin-top: 40px;
+        }
+        .team-members .card {
+            border: none;
+            background: transparent;
+        }
+        .team-members img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        /* Navbar Visibility */
+        .navbar {
+            display: none;
+        }
+        .navbar.active {
+            display: block;
+        }
+        /* Media Queries for Mobile Styling */
+        @media (max-width: 576px) {
+            .team-members img {
+                width: 100px;
+                height: 100px;
+            }
+            .about-content {
+                margin-left: 80px;
+            }
+            .about-social-icons {
+                left: 10px;
+                gap: 15px;
+            }
+            .about-social-icons a {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar for Home Page (with Search) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-home">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TravelBloom</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavHome">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavHome">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#" data-page="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="contact">Contact Us</a></li>
+                </ul>
+                <form class="d-flex" id="search-form">
+                    <input id="search-input" class="form-control me-2" type="search" placeholder="Search destinations" aria-label="Search">
+                    <button id="search-btn" class="btn btn-primary me-2" type="button">Search</button>
+                    <button id="clear-btn" class="btn btn-secondary" type="button">Clear</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar for About Us and Contact Us Pages (no Search) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-other">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">TravelBloom</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavOther">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavOther">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-page="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <div class="container text-center">
+            <h1>Explore Your Dream Destination</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <button class="btn btn-primary mt-3">Book Now</button>
+            <div class="social-icons mt-3">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Page -->
+    <div id="about" class="page-section">
+        <div class="container position-relative">
+            <!-- Social Media Icons on the Left -->
+            <div class="about-social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- About Us Content -->
+            <div class="about-content">
+                <h2>About TravelBloom</h2>
+                <p>Founded in 2015, TravelBloom is dedicated to crafting unforgettable travel experiences across the globe. Our mission is to connect travelers with the world’s most inspiring destinations, blending adventure, culture, and relaxation. With a commitment to sustainability and personalized service, we strive to make every journey meaningful.</p>
+                <p>Our team of travel enthusiasts works tirelessly to curate unique itineraries, ensuring every trip reflects our core values of integrity, innovation, and customer satisfaction. Explore with us and discover the world through a new lens!</p>
+                <!-- Team Members -->
+                <div class="team-members">
+                    <h3>Meet Our Team</h3>
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Team Member">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sarah Johnson</h5>
+                                    <p class="card-text">Founder & CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Team Member">
+                                <div class="card-body">
+                                    <h5 class="card-title">Michael Lee</h5>
+                                    <p class="card-text">Head of Operations</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="card">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Team Member">
+                                <div class="card-body">
+                                    <h5 class="card-title">Emily Chen</h5>
+                                    <p class="card-text">Marketing Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Page -->
+    <div id="contact" class="page-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+    <div id="search-results" class="container mt-4"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="travel_recommendation.js"></script>
+    <!-- Inline Script to Toggle Navbars and Search Results -->
+    <script>
+        // Function to toggle navbars and search results based on active page
+        function toggleNavbarsAndResults() {
+            const navbarHome = document.getElementById('navbar-home');
+            const navbarOther = document.getElementById('navbar-other');
+            const searchResults = document.getElementById('search-results');
+            const isHomeActive = document.getElementById('home').classList.contains('active');
+            const isAboutActive = document.getElementById('about').classList.contains('active');
+            const isContactActive = document.getElementById('contact').classList.contains('active');
+
+            navbarHome.classList.toggle('active', isHomeActive);
+            navbarOther.classList.toggle('active', isAboutActive || isContactActive);
+            searchResults.classList.toggle('active', isHomeActive);
+        }
+
+        // Run on page load
+        toggleNavbarsAndResults();
+
+        // Add to existing navigation click handler
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(toggleNavbarsAndResults, 0);
+            });
+        });
+    </script>
+</body>
+</html>
